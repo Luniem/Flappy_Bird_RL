@@ -2,6 +2,9 @@ import flappy_bird_gymnasium
 import gymnasium
 import numpy as np
 
+import tensorflow as tf
+from tensorflow import keras
+
 from keras.models import Sequential
 from keras.layers import Dense, Activation, Flatten
 from keras.optimizers import Adam
