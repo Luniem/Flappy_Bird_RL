@@ -2,6 +2,14 @@ import flappy_bird_gymnasium
 import gymnasium
 import numpy as np
 
+from keras.models import Sequential
+from keras.layers import Dense, Activation, Flatten
+from keras.optimizers import Adam
+
+from rl.agents.dqn import DQNAgent
+from rl.policy import EpsGreedyQPolicy
+from rl.memory import SequentialMemory
+
 # our environment is the environment our flappy bird plays in
 # the environment gives us our observations, our possible actions in our environment, our reward and some more info (terminated or not)
 env = gymnasium.make("FlappyBird-v0", render_mode="human", use_lidar=False)
